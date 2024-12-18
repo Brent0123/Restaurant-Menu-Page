@@ -1,52 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BOURBON Restaurant Menu</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOURBON Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header Section -->
-  <header>
-    <h1>BOURBON Restaurant</h1>
-    <button id="theme-toggle">Toggle Light/Dark Mode</button>
-  </header>
+    <header>
+        <h1>BOURBON Restaurant Menu</h1>
+        <button id="theme-btn">Toggle Light/Dark Theme</button>
+    </header>
 
-  <!-- Search Bar -->
-  <section id="search-section">
-    <input type="text" id="search-bar" placeholder="Search for dishes...">
-  </section>
+    <section>
+        <input type="text" id="search" placeholder="Search for dishes...">
+        <div id="categories">
+            <button class="filter-btn" data-category="all">All</button>
+            <button class="filter-btn" data-category="appetizers">Appetizers</button>
+            <button class="filter-btn" data-category="main-course">Main Course</button>
+            <button class="filter-btn" data-category="desserts">Desserts</button>
+            <button class="filter-btn" data-category="drinks">Drinks</button>
+        </div>
+    </section>
 
-  <!-- Category Buttons -->
-  <nav id="category-buttons">
-    <button class="category-btn" data-category="All">All</button>
-    <button class="category-btn" data-category="Appetizers">Appetizers</button>
-    <button class="category-btn" data-category="Main Course">Main Course</button>
-    <button class="category-btn" data-category="Desserts">Desserts</button>
-    <button class="category-btn" data-category="Drinks">Drinks</button>
-  </nav>
+    <section id="menu">
+        <h2>Menu Items</h2>
+        <div id="menu-items">
+            <!-- Menu items will load dynamically here -->
+        </div>
+    </section>
 
-  <!-- Menu Section -->
-  <main id="menu-section"></main>
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <p>Total: $<span id="total-price">0.00</span></p>
+        <button id="checkout-btn">Checkout</button>
+        <ul id="cart-items"></ul>
+    </section>
 
-  <!-- Shopping Cart -->
-  <section id="cart-section">
-    <h2>Shopping Cart</h2>
-    <ul id="cart-items"></ul>
-    <h3>Total: $<span id="cart-total">0.00</span></h3>
-  </section>
-
-  <!-- Modal for Item Details -->
-  <div id="modal" class="hidden">
-    <div class="modal-content">
-      <span id="close-modal">&times;</span>
-      <h3 id="modal-title"></h3>
-      <p id="modal-details"></p>
-      <p id="modal-price"></p>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

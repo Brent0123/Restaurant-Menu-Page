@@ -1,74 +1,85 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  header h1 {
-    margin: 0;
-  }
-  
-  button {
-    margin: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-  }
-  
-  #menu-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .menu-item {
-    border: 1px solid #ccc;
-    margin: 10px;
-    padding: 10px;
-    width: 200px;
-    text-align: center;
-    background-color: #fff;
-    transition: transform 0.3s ease;
-  }
-  
-  .menu-item:hover {
-    transform: scale(1.05);
-  }
-  
-  #cart-section {
-    position: fixed;
-    top: 50px;
-    right: 10px;
-    background: #fff;
-    padding: 10px;
-    border: 1px solid #ccc;
-    width: 200px;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  .dark-mode {
-    background-color: #222;
-    color: #f4f4f9;
-  }
-  
-  .modal-content {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #fff;
-    padding: 20px;
-    border: 1px solid #ccc;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-theme {
+  background-color: #333;
+  color: white;
+}
+
+/* General Styling */
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+h1, h2 {
+  margin: 10px;
+}
+
+/* Buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #45a049;
+}
+.filter-btn {
+  background-color: #008CBA;
+}
+#theme-btn {
+  background-color: #f39c12;
+}
+
+/* Menu Items */
+#menu-items, #cart-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+.menu-item, .cart-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  width: 150px;
+  background-color: white;
+  border-radius: 5px;
+}
+.cart-item button {
+  background-color: red;
+}
+
+/* Dark Mode Adjustments */
+.dark-theme .menu-item, .dark-theme .cart-item {
+  background-color: #444;
+  color: white;
+  border-color: #666;
+}
+.dark-theme button {
+  color: #333;
+}
+.dark-theme button:hover {
+  background-color: #45a049;
+}
+.dark-theme .filter-btn {
+  background-color: #008CBA;
+}
+.dark-theme #theme-btn {
+  background-color: #f39c12;
+  color: #333;
+}
+.dark-theme input {
+  color: #333;
+}
