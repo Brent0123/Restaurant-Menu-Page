@@ -1,3 +1,4 @@
+/* Base styles for the body */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,23 +8,26 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+/* Styles for dark theme */
 .dark-theme {
   background-color: #333;
   color: white;
 }
 
-/* General Styling */
+/* Header styling */
 header {
   background-color: #4CAF50;
   color: white;
   text-align: center;
   padding: 10px 0;
 }
+
+/* Heading styles */
 h1, h2 {
   margin: 10px;
 }
 
-/* Buttons */
+/* General button styles */
 button {
   background-color: #4CAF50;
   color: white;
@@ -31,24 +35,33 @@ button {
   padding: 10px 15px;
   margin: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
+
+/* Hover effect for buttons */
 button:hover {
   background-color: #45a049;
 }
+
+/* Specific styles for filter buttons */
 .filter-btn {
   background-color: #008CBA;
 }
+
+/* Theme button style */
 #theme-btn {
   background-color: #f39c12;
 }
 
-/* Menu Items */
+/* Layout for menu items and cart items */
 #menu-items, #cart-items {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   padding: 10px;
 }
+
+/* Individual menu item and cart item styling */
 .menu-item, .cart-item {
   border: 1px solid #ddd;
   padding: 10px;
@@ -56,30 +69,91 @@ button:hover {
   width: 150px;
   background-color: white;
   border-radius: 5px;
+  transition: transform 0.3s;
 }
+
+/* Hover effect for menu and cart items */
+.menu-item:hover, .cart-item:hover {
+  transform: scale(1.05);
+}
+
+/* Remove button style in cart */
 .cart-item button {
   background-color: red;
 }
 
-/* Dark Mode Adjustments */
+/* Dark theme adjustments */
 .dark-theme .menu-item, .dark-theme .cart-item {
   background-color: #444;
   color: white;
   border-color: #666;
 }
+
 .dark-theme button {
   color: #333;
 }
+
 .dark-theme button:hover {
   background-color: #45a049;
 }
+
 .dark-theme .filter-btn {
   background-color: #008CBA;
 }
+
 .dark-theme #theme-btn {
   background-color: #f39c12;
   color: #333;
 }
+
 .dark-theme input {
   color: #333;
+}
+
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 600px) {
+  #menu-controls {
+      flex-direction: column;
+  }
+  .menu-item, .cart-item {
+      width: 100%;
+  }
 }

@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header with restaurant name and theme toggle -->
     <header>
-        <h1>BOURBON Restaurant Menu</h1>
-        <button id="theme-btn">Toggle Light/Dark Theme</button>
+        <h1>BOURBON Restaurant</h1>
+        <button id="theme-btn">Toggle Theme</button>
     </header>
 
-    <section>
+    <!-- Search and filter section -->
+    <section id="menu-controls">
         <input type="text" id="search" placeholder="Search for dishes...">
         <div id="categories">
             <button class="filter-btn" data-category="all">All</button>
@@ -23,6 +25,7 @@
         </div>
     </section>
 
+    <!-- Menu items display section -->
     <section id="menu">
         <h2>Menu Items</h2>
         <div id="menu-items">
@@ -30,12 +33,22 @@
         </div>
     </section>
 
+    <!-- Cart section -->
     <section id="cart">
         <h2>Your Cart</h2>
         <p>Total: $<span id="total-price">0.00</span></p>
         <button id="checkout-btn">Checkout</button>
         <ul id="cart-items"></ul>
     </section>
+
+    <!-- Modal for item details -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+        </div>
+    </div>
 
     <script src="app.js"></script>
 </body>
